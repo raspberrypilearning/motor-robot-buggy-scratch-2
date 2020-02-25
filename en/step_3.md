@@ -16,7 +16,7 @@ You're going to write some simple code to test that everything is working and te
 
 Open Scratch 2 and load the **Raspberry Pi GPIO** extension.
 
-To do this, click on `More Blocks`{:class="block2looks"} block palette heading, click `Add an Extension` and choose the `Pi GPIO` extension.
+To do this, click on `More Blocks`{:class="blocklooks"} block palette heading, click `Add an Extension` and choose the `Pi GPIO` extension.
 
 ![Add the Raspberry Pi GPIO extension](images/testing_GPIOextension.png)
 
@@ -26,7 +26,7 @@ To do this, click on `More Blocks`{:class="block2looks"} block palette heading, 
 
 Grab a `when space key pressed`{:class="block3events"} event block and change the event key to **q**.
 
-```blocks2
+```blocks
 when [q v] key pressed
 ```
 
