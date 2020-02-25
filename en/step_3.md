@@ -47,7 +47,7 @@ This will turn GPIO pin 7 low (off) and keep it off. Now you need more of these 
 
 --- task ---
 
-```blocks3
+```blocks
 when [q v] key pressed
 set gpio (7 v) to output [low v] ::extension
 + set gpio (8 v) to output [low v] ::extension
