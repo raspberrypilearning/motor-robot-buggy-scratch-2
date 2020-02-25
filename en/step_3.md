@@ -24,7 +24,7 @@ To do this, click on `More Blocks`{:class="blocklooks"} block palette heading, c
 
 --- task ---
 
-Grab a `when space key pressed`{:class="block3events"} event block and change the event key to **q**.
+Grab a `when space key pressed`{:class="blockevents"} event block and change the event key to **q**.
 
 ```blocks
 when [q v] key pressed
@@ -34,7 +34,7 @@ when [q v] key pressed
 
 --- task ---
 
-from the Raspberry Pi GPIO block palette, add a block that says `set gpio 7 to output low`{:class="block3extensions"}.
+from the Raspberry Pi GPIO block palette, add a block that says `set gpio 7 to output low`{:class="blockextensions"}.
 
 ```blocks
 when [q v] key pressed
@@ -59,9 +59,9 @@ set gpio (7 v) to output [low v] ::extension
 
 --- task ---
 
-Finally, add a block from the control block palette to `stop all`{:class="block3control"} to ensure the motors don't start again until you want them to.
+Finally, add a block from the control block palette to `stop all`{:class="blockcontrol"} to ensure the motors don't start again until you want them to.
 
-```blocks3
+```blocks
 when [q v] key pressed
 set gpio (7 v) to output [low v] ::extension
 set gpio (8 v) to output [low v] ::extension
@@ -80,9 +80,9 @@ The next step is to write a snippet of code for each motor that will tell you wh
 
 --- task ---
 
-Add a new `event`{:class="block3events"} block for when the **7** key is pressed.
+Add a new `event`{:class="blockevents"} block for when the **7** key is pressed.
 
-```blocks3
+```blocks
 when [7 v] key pressed
 ```
 
@@ -92,7 +92,7 @@ when [7 v] key pressed
 
 Under that, place a block to turn GPIO pin 7 on (high).
 
-```blocks3
+```blocks
 when [7 v] key pressed
 +   set gpio (7 v) to output [high v] ::extension
 ```
@@ -103,9 +103,9 @@ This will turn GPIO pin 7 **on**, making one motor turn in either backwards or f
 
 --- task ---
 
-To turn the motor off again, add a tiny `wait`{:class="block3control"} and another block to turn GPIO pin 7 off (low).
+To turn the motor off again, add a tiny `wait`{:class="blockcontrol"} and another block to turn GPIO pin 7 off (low).
 
-```blocks3
+```blocks
 when [7 v] key pressed
 set gpio (7 v) to output [high v] ::extension
 +   wait (0.1) seconds
@@ -120,7 +120,7 @@ Now the motor will turn on, showing which motor and which direction, then quickl
 
 Now repeat that code for each of your GPIO pins 8, 9 and 10.
 
-```blocks3
+```blocks
 when [8 v] key pressed
 set gpio (8 v) to output [high v] ::extension
 wait (0.1) seconds
@@ -132,9 +132,9 @@ wait (0.1) seconds
 set gpio (9 v) to output [low v] ::extension
 ```
 
-Since there is no **10** key, use `when 0 key pressed`{:class="block3events"} for GPIO pin 10.
+Since there is no **10** key, use `when 0 key pressed`{:class="blockevents"} for GPIO pin 10.
 
-```blocks3
+```blocks
 when [0 v] key pressed
 set gpio (10 v) to output [high v] ::extension
 wait (0.1) seconds
