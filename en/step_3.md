@@ -36,7 +36,7 @@ when [q v] key pressed
 
 from the Raspberry Pi GPIO block palette, add a block that says `set gpio 7 to output low`{:class="block3extensions"}.
 
-```blocks3
+```blocks
 when [q v] key pressed
 + set gpio (7 v) to output [low v] ::extension
 ```
